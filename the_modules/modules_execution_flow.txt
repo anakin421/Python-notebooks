@@ -1,0 +1,33 @@
+circular_solution_a.py execution flow ==>
+
+running circular_solution_a.py in terminal
+both script has __name__ ==  '__main__': 
+
+line			module			                 statement 
+1				circular_solution_a				def display_text_a(msg):  (added in ST)
+5				circular_solution_a				def call_b():			  (added in ST)
+13				circular_solution_a				import if __name__ == '__main__': (condition true)
+14				circular_solution_a				call_b()
+15				circular_solution_a				import circular_solution_b
+-----------------------------------------------------------------------
+				circular_solution_b is imported for 1st time 
+
+1				circular_solution_a				def display_text_b(msg): (added in ST)
+5				circular_solution_a				def call_a():			 (added in ST)
+13				circular_solution_a				import if __name__ == '__main__': (condition false)
+
+				circular_solution_b is now exectuted
+-----------------------------------------------------------------------
+
+8				circular_solution_a				circular_solution_b.display_text_b("Hello b! I just imported you")
+				
+1				circular_solution_b				def display_text_b(msg):
+2				circular_solution_b				print(msg)
+
+
+
+-----------------------------------------------------------------------
+
+
+
+output :- Hello b ! i just imported you
